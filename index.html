@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konwerter walutowy</title>
+    <link href="/style/style.css" rel="stylesheet" />
+    <link href="/style/header.css" rel="stylesheet" />
+    <link href="/style/form.css" rel="stylesheet" />
+    <link href="/style/footer.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/script.js"></script>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Konwerter walutowy</h1>
+    </header>
+    <main>
+      <div>
+        <form class="form__currencyChoice js-currencyChoice">
+          <label>
+            Waluta wejściowa:
+            <select name="inputCurrency" class="form__choice js-currencyInput">
+              <option value="PLN" selected>Polski złoty [PLN]</option>
+              <option value="USD">Dolar amerykański [USD]</option>
+              <option value="EUR">Euro [EUR]</option>
+              <option value="CHF">Frank szwajcarski [CHF]</option>
+            </select>
+          </label>
+          <label>
+            Waluta wyjściowa:
+            <select
+              name="outputCurrency"
+              class="form__choice js-currencyOutput"
+            >
+              <option value="PLN">Polski złoty [PLN]</option>
+              <option value="USD" selected>Dolar amerykański [USD]</option>
+              <option value="EUR">Euro [EUR]</option>
+              <option value="CHF">Frank szwajcarski [CHF]</option>
+            </select>
+          </label>
+          <label>
+            Kurs:<input class="form__rate js-rate" type="number" disabled />
+          </label>
+        </form>
+      </div>
+      <div class="form__exchange js-exchange">
+        <form>
+          <label>
+            Kwota do przeliczenia:
+            <br />
+            <input type="number" class="form__input js-exchangeInput" min="0" />
+          </label>
+          <span class="form__currencySymbol js-form__symbol--entrance"></span>
+          <br />
+          ⬇
+          <br />
+          <label>
+            <input
+              type="number"
+              class="form__input js-exchangeOutput"
+              disabled
+            />
+          </label>
+          <span class="form__currencySymbol js-form__symbol--exit"></span>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">© Paweł Mroczek 2022</footer>
+  </body>
+</html>
